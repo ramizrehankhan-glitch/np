@@ -1,0 +1,270 @@
+/* 13 Investment — Figma node 1:7136 */
+
+.investment__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 120px 100px;
+  background: #0b2751;
+  border-radius: 12px;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.02);
+  overflow: clip;
+  color: #fefefe;
+}
+
+.investment__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+.investment__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background: #2a4670; /* rgba(255,255,255,0.12) plus-lighter over #0b2751 */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.investment__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-box: trim-both cap alphabetic;
+}
+
+.investment__lead {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.investment__plans {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.investment__plan {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: clip;
+}
+
+.investment__plan--dark {
+  background: #113d7d;
+}
+
+.investment__plan-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.investment__plan-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.investment__num {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #ebf2fe;
+  border: 1.2px solid #ffffff;
+  border-radius: 9.6px;
+  overflow: clip;
+  color: #4d5460;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 20px;
+  letter-spacing: -0.1504px;
+}
+
+.investment__tag {
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  padding: 8px 12px; /* 9px / 13px in Figma, minus the 1px inside stroke */
+  background: #ebf2fe;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  color: #0a1108;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* "Recurring": #1351d8 fill in plus-lighter blend over the #113d7d card = #248eff. */
+.investment__tag--accent {
+  justify-content: center;
+  padding: 0 16px;
+  background: #248eff;
+  border: 0;
+  color: #ffffff;
+}
+
+.investment__plan-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.investment__price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.investment__label {
+  color: #4d5460;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.1504px;
+  text-transform: uppercase;
+}
+
+.investment__price {
+  color: #0a1108;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+.investment__price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.investment__price-muted {
+  color: #ffffff;
+}
+
+.investment__price-accent {
+  color: #ffcb11;
+}
+
+.investment__per {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.investment__note {
+  padding: 11px 15px; /* 12px / 16px in Figma, minus the 1px inside stroke */
+  background: #f9f9fb;
+  border: 1px solid #dae1e9;
+  border-radius: 4px;
+  color: #0a0a0a;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.investment__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 36px;
+  color: #0b2751;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.investment__meta--center {
+  align-items: center;
+}
+
+.investment__meta-item {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.investment__meta-item--w240 {
+  width: 240px;
+}
+
+.investment__meta-item--w196 {
+  width: 196px;
+}
+
+/* Figma gives this label a blank second line, making the row 36px tall. */
+.investment__meta-item--2line {
+  min-height: 36px;
+}
+
+.investment__btn {
+  background: transparent;
+  border: 1px solid #000000;
+  color: #171717;
+  padding: 15px 23px; /* 16px / 24px in Figma, minus the 1px inside stroke */
+}
+
+.investment__plan--dark .investment__label {
+  color: #f9f9fb;
+}
+
+.investment__plan--dark .investment__note {
+  background: #0b2751;
+  border-color: #1351d8;
+  color: #ffffff;
+}
+
+.investment__plan--dark .investment__meta {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.investment__plan--dark .investment__btn {
+  background: #ffffff;
+}
+
+.investment__footnote {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
