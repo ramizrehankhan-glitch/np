@@ -1,0 +1,296 @@
+/* 15 Use Cases — Figma node 1:7279 */
+
+.use-cases__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 64px;
+  background: #ebf2fe;
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+/* Header */
+.use-cases__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.use-cases__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px; /* 10.5/12.5 in Figma, where the 0.5px stroke takes no layout space */
+  background: #ffffff;
+  border: 0.5px solid #dee8fc;
+  border-radius: 4px;
+  color: #1351d8;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.use-cases__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 1052px;
+  color: #0a0a0a;
+  text-align: center;
+}
+
+.use-cases__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-box: trim-both cap alphabetic;
+}
+
+.use-cases__lead {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Carousel */
+.use-cases__carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+}
+
+.use-cases__viewport {
+  width: 100%;
+  max-width: 1264px;
+}
+
+.use-cases__track {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+.use-cases__item {
+  flex: 0 0 calc((100% - 24px) / 2);
+  display: flex;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.use-cases__item.is-active {
+  opacity: 1;
+}
+
+.use-cases__case {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 28px;
+  min-height: 235px;
+  padding: 24px;
+  background: #fefefe;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 rgba(15, 23, 42, 0.03);
+  overflow: hidden;
+}
+
+.use-cases__case-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.use-cases__industry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 15px 7px 11px; /* 8/16/8/12 in Figma; the 1px stroke doesn't take layout space there */
+  background: #ebf2fe;
+  border: 1px solid #d5e4fa;
+  border-radius: 4px;
+  color: #171717;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.use-cases__function {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.use-cases__case-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #0a0a0a;
+}
+
+.use-cases__case-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.use-cases__case-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.use-cases__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto; /* keeps the controls aligned across cards of different text length */
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.use-cases__controls-label {
+  color: #64748b;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.use-cases__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px;
+  padding-top: 8px;
+}
+
+.use-cases__chip {
+  padding: 4px 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  color: #334155;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* Carousel controls */
+.use-cases__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.use-cases__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1351d8;
+  border: 1px solid #1351d8;
+  color: #ffffff;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.use-cases__arrow:hover:not(:disabled) {
+  background: #0f45bb;
+  border-color: #0f45bb;
+}
+
+.use-cases__arrow:disabled {
+  background: #ffffff;
+  border-color: #dee8fc;
+  color: #c4d3f5;
+  cursor: default;
+}
+
+.use-cases__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.use-cases__count {
+  min-width: 52px;
+  color: #0a0a0a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Dark callout */
+.use-cases__callout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1264px;
+  padding: 32px; /* 33px in Figma, where the 1px stroke takes no layout space */
+  background: #0b2751;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  filter: drop-shadow(0 2px 7px rgba(15, 23, 42, 0.03));
+  color: #ffffff;
+}
+
+.use-cases__callout::after {
+  content: "";
+  position: absolute;
+  left: 493px;
+  top: 22.55px;
+  width: 4px;
+  height: 70px;
+  background: #2fcb86;
+}
+
+.use-cases__callout-title {
+  flex: 0 0 495px;
+  padding-right: 63px; /* text is 432px wide inside a 495px column */
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-box: trim-both cap alphabetic;
+}
+
+.use-cases__callout-text {
+  flex: 1 1 0;
+  min-width: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* The exported rocket glyph is 21×21 but sits in a 20×20 box in Figma. */
+.use-cases__cta-icon {
+  margin: -0.5px;
+}
