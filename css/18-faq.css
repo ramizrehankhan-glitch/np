@@ -1,0 +1,147 @@
+/* 18 FAQ — Figma node 1:7615 ("FAQ opt 1") */
+
+.faq__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 24px 100px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+/* ---- Heading ---- */
+
+.faq__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Shared .eyebrow, but 41px tall as in Figma: the 0.5px stroke is drawn inside
+   (a 0.5px CSS border rounds up to 1px and adds to the box). */
+.faq .faq__eyebrow {
+  border: 0;
+  box-shadow: inset 0 0 0 0.5px #dee8fc;
+}
+
+/* Figma trims this text box to cap-height → baseline (text-box-trim: cap alphabetic).
+   Plus Jakarta Sans at 40px/56px: top trim 14.52px, bottom trim 11.68px → 29.8px box. */
+.faq__title {
+  margin: -14.52px 0 -11.68px;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ---- Accordions ---- */
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 1280px;
+  max-width: 100%;
+}
+
+/* Closed state (Figma 1:7627 …) */
+.faq__item {
+  padding: 25px 31px; /* 26px / 32px in Figma, minus the 1px inside stroke */
+  background: #ffffff;
+  border: 1px solid #f1f2f9;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px 0 rgba(25, 33, 61, 0.06); /* Shadows/Neutrals/No.2 */
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Open state (Figma 1:7622) */
+.faq__item[open] {
+  padding-bottom: 39px;
+  background: #f7f9fe;
+  border-color: #d9dbe9;
+  box-shadow: 0 5px 15px 0 rgba(25, 33, 61, 0.06); /* Shadows/Neutrals/No.4 */
+}
+
+.faq__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__summary::marker {
+  content: "";
+}
+
+.faq__summary:focus-visible {
+  outline: 2px solid #1351d8;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* 20px / 1.35, trimmed to cap-height → baseline (14.9px box) like Figma.
+   Top trim 6.76px, bottom trim 5.34px. */
+.faq__question {
+  flex: 1 1 0;
+  min-width: 1px;
+  max-width: 650px;
+  margin: -6.76px 0 -5.34px;
+  color: #170f49;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.faq__item[open] .faq__question {
+  font-weight: 700;
+}
+
+/* Round icon button: secondary (closed) / primary (open). */
+.faq__toggle {
+  flex: 0 0 auto;
+  width: 34.418px;
+  height: 34.418px;
+  border-radius: 100px;
+  background: #f1f2f9 url("../assets/18-icon-chevron-right.svg") center / 20.418px 20.418px no-repeat;
+  box-shadow: 0 0.5px 1px 0 rgba(25, 33, 61, 0.07); /* Shadows/Neutrals/No.1 */
+  transition: background-color 0.15s ease;
+}
+
+.faq__item[open] .faq__toggle {
+  background-color: #1351d8;
+  background-image: url("../assets/18-icon-chevron-down.svg");
+  box-shadow:
+    0 2px 6px 0 rgba(74, 58, 255, 0.1),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.12),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.25);
+}
+
+.faq__summary:hover .faq__toggle {
+  filter: brightness(0.97);
+}
+
+.faq__item[open] .faq__summary:hover .faq__toggle {
+  filter: brightness(1.1);
+}
+
+.faq__answer {
+  width: 1152px;
+  max-width: 100%;
+  margin-top: 16px;
+  color: #0a0a0a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}

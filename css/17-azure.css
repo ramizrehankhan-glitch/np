@@ -1,0 +1,323 @@
+/* 17 Azure — Figma node 1:7473 ("Gaps in native Azure governance" comparison table) */
+
+.azure__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 64px;
+  background: #ebf2fe;
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.azure__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+}
+
+/* ---- Heading ---- */
+
+.azure__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Same as the shared .eyebrow but with a near-white fill; 41px tall like Figma. */
+.azure__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10.5px 12.5px;
+  background: #fefefe;
+  box-shadow: inset 0 0 0 0.5px #dee8fc; /* 0.5px inside stroke; a CSS border would round up to 1px */
+  border-radius: 4px;
+  color: #1351d8;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.azure__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #0a0a0a;
+  text-align: center;
+}
+
+/* Figma trims this text box to cap-height → baseline (text-box-trim: cap alphabetic).
+   Plus Jakarta Sans: ascent 1.038em, descent 0.222em, cap height 0.745em.
+   At 40px/56px: top trim 14.52px, bottom trim 11.68px → 29.8px box. */
+.azure__title {
+  margin: -14.52px 0 -11.68px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  white-space: nowrap;
+}
+
+.azure__lead {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* ---- Table card ---- */
+
+.azure__table-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 1281px;
+  max-width: 100%;
+  height: 869px;
+  padding: 1.534px 0 0 1.534px; /* table sits 1.534px in from the frame edge, as in Figma */
+  background: #0f1b38;
+  border-radius: 30.671px;
+  box-shadow: 0 36.805px 122.684px 0 rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Frame stroke (inside, 1.534px) drawn as an overlay so it doesn't shift the table. */
+.azure__table-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1.534px solid rgba(255, 255, 255, 0.08);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Glowing hairline along the top edge (Figma 1:7611). */
+.azure__glow {
+  position: absolute;
+  top: 0;
+  left: 431.07px;
+  width: 574.792px;
+  height: 1.534px;
+  background: linear-gradient(90deg, rgba(19, 81, 216, 0) 0%, rgba(19, 81, 216, 0.7) 50%, rgba(19, 81, 216, 0) 100%);
+  z-index: 3;
+}
+
+.azure__table-wrap {
+  position: relative;
+  width: 1280px;
+}
+
+.azure__table {
+  width: 1280px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.azure__col--cap { width: 332.796px; }
+.azure__col--gw  { width: 307.193px; }
+.azure__col--pt  { width: 281.590px; }
+.azure__col--ag  { width: 358.421px; }
+
+.azure__row--head { height: 126.361px; }
+.azure__row--r1   { height: 127.044px; }
+.azure__row--r2,
+.azure__row--r3,
+.azure__row--r4,
+.azure__row--r5   { height: 122.946px; }
+.azure__row--r6   { height: 122.263px; }
+
+.azure__table th,
+.azure__table td {
+  position: relative;
+  padding: 30.053px 38.25px;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom: 1.366px solid rgba(255, 255, 255, 0.08);
+}
+
+.azure__table th + th,
+.azure__table th + td,
+.azure__table td + td {
+  border-left: 1.366px solid rgba(255, 255, 255, 0.08);
+}
+
+.azure__table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+/* Row fills */
+.azure__row--head > * {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.azure__row--alt > * {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* AI Guardian column */
+.azure__table .azure__ag {
+  background: rgba(19, 81, 216, 0.37);
+  border-color: rgba(19, 81, 216, 0.3);
+}
+
+.azure__table .azure__row--alt .azure__ag {
+  background: rgba(19, 81, 216, 0.19);
+}
+
+.azure__table .azure__row--head .azure__ag {
+  background: #1354d8;
+}
+
+/* ---- Header cells ---- */
+
+.azure__th-text {
+  display: block;
+  color: #ebf2fe;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22.54px;
+  letter-spacing: 1.9125px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.azure__th-text--gw,
+.azure__th-text--pt {
+  white-space: normal;
+}
+
+.azure__th-text--gw { width: 230.864px; }
+.azure__th-text--pt { width: 204.909px; }
+
+.azure__ag-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.azure__ag-head img {
+  flex: 0 0 auto;
+  width: 46.748px;
+  height: 56px;
+}
+
+.azure__ag-title {
+  color: #f8f8f8;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.9955px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Blue→cyan rail running down the left edge of the AI Guardian column (Figma 1:7492). */
+.azure__rail {
+  position: absolute;
+  top: 0.32px;
+  left: -4.08px;
+  width: 14.689px;
+  height: 864.914px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.azure__rail span {
+  flex: none;
+  width: 864.929px;
+  height: 4.098px;
+  border-radius: 0 0 2.732px 2.732px;
+  background: linear-gradient(90deg, #1351d8 0%, #20c7d8 100%);
+  transform: rotate(89.3deg);
+}
+
+/* ---- Body cells ---- */
+
+.azure__table tbody th {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28.687px;
+  white-space: nowrap;
+}
+
+.azure__plain,
+.azure__val {
+  display: block;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30.736px;
+}
+
+.azure__plain--gw { width: 230.864px; }
+.azure__plain--pt { width: 204.909px; }
+
+.azure__val { white-space: nowrap; }
+.azure__val--w169 { width: 169.392px; white-space: normal; }
+.azure__val--w194 { width: 193.981px; white-space: normal; }
+
+.azure__cell {
+  display: flex;
+  align-items: center;
+  gap: 10.928px;
+}
+
+.azure__mark {
+  position: relative;
+  flex: 0 0 auto;
+  width: 25.657px;
+  height: 25.657px;
+  overflow: hidden;
+}
+
+/* Font Awesome glyph box: 20px em square, placed as in Figma
+   (left calc(50% - 9.55px); top calc(50% - 10.76px) + 0.5px half-leading). */
+.azure__mark img {
+  position: absolute;
+  left: 3.278px;
+  top: 2.57px;
+  width: 20px;
+  height: 20px;
+}
+
+.azure__mark--warn img {
+  top: 3.14px;
+}
+
+.azure__check {
+  flex: 0 0 auto;
+  width: 24.589px;
+  height: 24.589px;
+}
+
+.azure__ag-text {
+  display: block;
+  width: 245.891px;
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 20.491px;
+  line-height: 30.736px;
+}
+
+/* ---- CTA ---- */
+
+.azure__cta img {
+  width: 21px;
+  height: 21px;
+  margin-right: -1px; /* Figma glyph box is 20px wide */
+}
