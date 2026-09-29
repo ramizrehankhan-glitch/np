@@ -1,0 +1,187 @@
+/* 10 Multi-agent — Figma node 1:6919 */
+
+.multi-agent__card {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 80px;
+  overflow: hidden;
+  background: #ebf2fe;
+  border-radius: 12px;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.02);
+}
+
+.multi-agent__media {
+  flex: 1 1 0;
+  min-width: 0;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Flattened product mockup (screen capture + 20% black overlay from Figma). */
+.multi-agent__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.multi-agent__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px 0;
+}
+
+.multi-agent__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Same pill as .eyebrow, but white and 41px tall (Figma draws the 0.5px stroke inside). */
+.multi-agent .multi-agent__eyebrow {
+  padding: 10px 12px;
+  background: #fefefe;
+}
+
+.multi-agent__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  color: #0a0a0a;
+}
+
+.multi-agent__title {
+  max-width: 610px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-box: trim-both cap alphabetic;
+}
+
+.multi-agent__lead {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.multi-agent__label {
+  color: #171717;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.multi-agent__agents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.multi-agent__agent {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.multi-agent__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 14.8px; /* 16px in Figma, minus the 1.2px inside stroke */
+  overflow: hidden;
+  background: #fefefe;
+  border: 1.2px solid #ffffff;
+  border-radius: 9.6px;
+}
+
+.multi-agent__agent-text {
+  flex: 0 1 521px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #0a0a0a;
+}
+
+.multi-agent__agent-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.multi-agent__agent-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.multi-agent__result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  padding: 32px; /* 33px in Figma, minus the 1px inside stroke */
+  background: #0b2751;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  filter: drop-shadow(0 2px 7px rgba(15, 23, 42, 0.03));
+}
+
+.multi-agent__result-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.multi-agent__result-tag::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.12);
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+}
+
+.multi-agent__result-tag img {
+  position: relative;
+  width: 18.752px;
+  height: 19.922px;
+}
+
+.multi-agent__result-text {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.multi-agent__btn-icon {
+  margin: -0.5px;
+}

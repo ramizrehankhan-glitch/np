@@ -1,0 +1,203 @@
+/* 02 Walkthrough — Figma node 1:6262 */
+
+.walkthrough {
+  padding: 0 24px;
+}
+
+.walkthrough__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 80px 64px;
+  background: #ebf2fe;
+  border-radius: 36px;
+}
+
+/* Header */
+.walkthrough__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.walkthrough__eyebrow {
+  /* Figma: 41px tall. Chromium renders the 0.5px border as 1px, so trim the padding by 1px. */
+  padding: 9.5px 11.5px;
+  background: #ffffff;
+}
+
+.walkthrough__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  color: #0a0a0a;
+  text-align: center;
+}
+
+.walkthrough__title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-box: trim-both cap alphabetic;
+}
+
+.walkthrough__lead {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Browser mockup */
+.walkthrough__browser {
+  position: relative;
+  flex: 0 0 auto;
+  width: 1440px;
+  max-width: 100%;
+  aspect-ratio: 1440 / 780;
+  border: 1px solid #1351d8;
+  border-radius: 12px 12px 24px 24px;
+  overflow: hidden;
+  background: #eef3fc;
+}
+
+.walkthrough__screen {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  width: 100%;
+  height: calc(100% - 44px);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.walkthrough__toolbar {
+  position: absolute;
+  top: -1.47px;
+  left: -1px;
+  right: -1px;
+  height: 46.14px;
+  overflow: hidden;
+  background: #143c95;
+  border-radius: 4px 4px 0 0;
+}
+
+.walkthrough__controls {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.walkthrough__tabs {
+  position: absolute;
+  left: 91.6px;
+  top: 2.07px;
+  display: flex;
+  align-items: center;
+  gap: 10.395px;
+}
+
+.walkthrough__tab-wrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+.walkthrough__tab {
+  display: flex;
+  align-items: center;
+  gap: 11.695px;
+  padding: 10.395px;
+  background: #1351d8;
+  border-radius: 10.395px 10.395px 0 0;
+  overflow: hidden;
+}
+
+.walkthrough__favicon {
+  width: 20.79px;
+  height: 20.79px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.walkthrough__tab-title {
+  width: 308px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15.593px;
+  line-height: normal;
+  letter-spacing: 0.2599px;
+  white-space: nowrap;
+}
+
+/* Feature cards */
+.walkthrough__features {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.walkthrough__feature {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.walkthrough__feature-label {
+  color: #171717;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-box: trim-both cap alphabetic;
+}
+
+.walkthrough__feature-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.walkthrough__feature-icon {
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #1351d8;
+  border-radius: 8px;
+}
+
+.walkthrough__feature-text {
+  flex: 1 1 0;
+  min-width: 0;
+  color: #1a1a1a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* In Figma this one text box is fixed at 296px (wider than its 280px slot). */
+.walkthrough__feature-text--wide {
+  margin-right: -16px;
+}

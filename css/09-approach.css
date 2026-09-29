@@ -1,0 +1,110 @@
+/* 09 Approach — Figma node 1:6906 */
+
+.approach {
+  padding: 0 100px;
+}
+
+.approach__cta {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 80px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-image: linear-gradient(90deg, #0b2751 0%, #0a2f83 100%);
+}
+
+/* Photo (875×528 in Figma, vertically centred and clipped to the 441px card) with its
+   #0b2a62 → transparent overlay baked in. */
+.approach__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 875px;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  pointer-events: none;
+}
+
+.approach__content {
+  position: relative;
+  flex: 0 1 686px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.approach__eyebrow {
+  position: relative;
+  isolation: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  color: #fefefe;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.approach__eyebrow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.12);
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+}
+
+.approach__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* In Figma both text boxes are wider than their 686px column and overflow it. */
+.approach__title {
+  width: 796px;
+  max-width: calc(100vw - 360px);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.4px;
+}
+
+.approach__lead {
+  width: 774px;
+  max-width: calc(100vw - 360px);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.18px;
+}
+
+.approach__btn {
+  position: relative;
+  flex-shrink: 0;
+  background: #ffffff;
+  color: #171717;
+  text-align: center;
+}
+
+.approach__btn img {
+  margin: -0.5px;
+}
