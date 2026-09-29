@@ -82,7 +82,6 @@
   flex: 0 0 auto;
   width: 1281px;
   max-width: 100%;
-  height: 869px;
   padding: 1.534px 0 0 1.534px; /* table sits 1.534px in from the frame edge, as in Figma */
   background: #0f1b38;
   border-radius: 30.671px;
@@ -320,4 +319,13 @@
   width: 21px;
   height: 21px;
   margin-right: -1px; /* Figma glyph box is 20px wide */
+}
+
+/* Narrower than the design (1281px card + 24px insets): let the table scroll sideways
+   inside the card instead of being clipped. */
+@media (max-width: 1329px) {
+  .azure__table-card {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }

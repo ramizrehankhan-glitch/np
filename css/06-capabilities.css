@@ -19,13 +19,6 @@
 }
 
 /* Header */
-/* Figma draws the 0.5px eyebrow stroke inside the 41px box; Chromium rounds a 0.5px border up to
-   1px outside the padding (43px), so draw it as an inset shadow instead. */
-.capabilities .eyebrow {
-  border: 0;
-  box-shadow: inset 0 0 0 0.5px #dee8fc;
-}
-
 .capabilities__header {
   width: 100%;
   display: flex;

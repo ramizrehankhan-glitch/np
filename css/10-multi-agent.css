@@ -45,9 +45,8 @@
   width: 100%;
 }
 
-/* Same pill as .eyebrow, but white and 41px tall (Figma draws the 0.5px stroke inside). */
+/* Same pill as .eyebrow, but white. */
 .multi-agent .multi-agent__eyebrow {
-  padding: 10px 12px;
   background: #fefefe;
 }
 

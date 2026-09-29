@@ -79,7 +79,9 @@ button {
   gap: 8px;
   padding: 10.5px 12.5px;
   background: #ecf2fd;
-  border: 0.5px solid #dee8fc;
+  /* Figma draws the 0.5px stroke inside the 41px box. A 0.5px CSS border is rounded up to 1px
+     and added outside the padding, so draw it as an inset shadow instead. */
+  box-shadow: inset 0 0 0 0.5px #dee8fc;
   border-radius: 4px;
   color: #1351d8;
   font-family: "Plus Jakarta Sans", sans-serif;

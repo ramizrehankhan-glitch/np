@@ -21,13 +21,6 @@
   width: 100%;
 }
 
-/* Shared .eyebrow, but 41px tall as in Figma: the 0.5px stroke is drawn inside
-   (a 0.5px CSS border rounds up to 1px and adds to the box). */
-.faq .faq__eyebrow {
-  border: 0;
-  box-shadow: inset 0 0 0 0.5px #dee8fc;
-}
-
 /* Figma trims this text box to cap-height → baseline (text-box-trim: cap alphabetic).
    Plus Jakarta Sans at 40px/56px: top trim 14.52px, bottom trim 11.68px → 29.8px box. */
 .faq__title {
