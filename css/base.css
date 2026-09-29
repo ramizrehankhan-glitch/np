@@ -1,0 +1,138 @@
+/* Base styles shared by every section.
+   Figma frame: "Design | AI Guardian - v2" (1760px wide, white, 20px top / 80px bottom padding,
+   sections stacked vertically with an 80px gap). */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #09090b;
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.page {
+  width: 100%;
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 20px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Section wrappers: in Figma, some sections span the full 1760px frame and
+   others are inset 24px on each side (1712px wide). */
+.section-full {
+  width: 100%;
+}
+
+.section-inset {
+  width: 100%;
+  padding: 0 24px;
+}
+
+/* Shared "eyebrow" label pill (e.g. "ENTERPRISE AI GOVERNANCE PLATFORM"). */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10.5px 12.5px;
+  background: #ecf2fd;
+  border: 0.5px solid #dee8fc;
+  border-radius: 4px;
+  color: #1351d8;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Shared pill buttons. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 56px;
+  padding: 16px 24px;
+  border-radius: 120px;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: #1351d8;
+}
+
+.btn--dark {
+  background: #1c1c1c;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
